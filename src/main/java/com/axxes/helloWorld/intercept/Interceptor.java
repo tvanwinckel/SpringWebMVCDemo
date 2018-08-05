@@ -29,8 +29,8 @@ public class Interceptor extends HandlerInterceptorAdapter {
     @Override
     public void postHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler, @Nullable final ModelAndView modelAndView) throws Exception {
         LOGGER.info("-- START POST HANDLE -- ");
-        LOGGER.info("Message send: " + modelAndView.getModel().get("message"));
-        LOGGER.info("View called: " + modelAndView.getViewName());
+        LOGGER.info("Message send: " + (modelAndView != null ? modelAndView.getModel().get("message") : "No Message"));
+        LOGGER.info("View called: " + (modelAndView != null ? modelAndView.getViewName() : "No ViewName"));
         LOGGER.info("-- STOP POST HANDLE -- ");
     }
 
