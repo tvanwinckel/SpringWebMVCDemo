@@ -15,8 +15,7 @@ public class Config {
      */
 
     @Bean
-    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory>
-    webServerFactoryCustomizer() {
+    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> webServerFactoryCustomizer() {
         return factory -> factory.setContextPath("/axxes");
     }
 
